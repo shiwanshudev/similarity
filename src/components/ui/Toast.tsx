@@ -2,7 +2,7 @@
 
 import { Icons } from "@components/Icons";
 import { cn } from "@lib/utils";
-import { LucideIcon } from "lucide-react";
+
 import * as React from "react";
 import hotToast, { Toaster as HotToaster } from "react-hot-toast";
 
@@ -30,7 +30,7 @@ interface ToastIconProps extends Partial<React.SVGProps<SVGSVGElement>> {
 }
 
 Toast.Icon = function ToastIcon({ name, className, ...props }: ToastIconProps) {
-  const Icon: LucideIcon = Icons[name];
+  const Icon = Icons[name];
 
   if (!Icon) {
     return null;
